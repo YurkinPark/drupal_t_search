@@ -1,0 +1,17 @@
+{
+    "name": "yurkinpark/drupal_t_search",
+    "type": "phpcodesniffer-standard",
+    "description": "Package can be used to find strings for translations",
+    "keywords": [
+        "phpcs",
+    ],
+    "autoload": {
+        "psr-4": {
+            "SearchTPhp\\": "coder_sniffer/SearchTPhp",
+        }
+    },
+    "require": {
+        "php": ">=7.2",
+        "drupal/coder": "^8.3",
+    }
+}

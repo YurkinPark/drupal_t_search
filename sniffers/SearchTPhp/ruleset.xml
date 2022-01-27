@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<ruleset name="SearchTPhp">
+  <description>Searching for strings to be translated</description>
+
+  <!-- All Drupal code files must be UTF-8 encoded and we treat them as such. -->
+  <arg name="encoding" value="utf-8"/>
+
+  <autoload>./autoload.php</autoload>
+
+  <rule ref="Internal.NoCodeFound">
+    <!-- Empty files are fine, might be used for testing. -->
+    <exclude-pattern>*</exclude-pattern>
+  </rule>
+
+<!--  <rule ref="DrupalPractice.CodeAnalysis.VariableAnalysis">-->
+<!--    &lt;!&ndash; Do not run this sniff on template files. &ndash;&gt;-->
+<!--    <exclude-pattern>*.tpl.php</exclude-pattern>-->
+<!--    <properties>-->
+<!--      <property name="allowUnusedFunctionParameters" value="true"/>-->
+<!--    </properties>-->
+<!--  </rule>-->
+<!--  <rule ref="DrupalPractice.CodeAnalysis.VariableAnalysis.UndefinedVariable">-->
+<!--    <severity>0</severity>-->
+<!--  </rule>-->
+
+  <!-- Ignore various version control directories. -->
+  <exclude-pattern>*/\.git/*</exclude-pattern>
+  <exclude-pattern>*/\.svn/*</exclude-pattern>
+  <exclude-pattern>*/\.hg/*</exclude-pattern>
+  <exclude-pattern>*/\.bzr/*</exclude-pattern>
+</ruleset>
